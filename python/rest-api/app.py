@@ -11,6 +11,7 @@ def generate_id():
 # endpoint to get all books
 @app.route('/reading-list/books', methods=['GET'])
 def get_books():
+    print(jsonify(books))
     return jsonify({'books': books})
 
 # endpoint to add a new book
@@ -31,6 +32,7 @@ def add_book():
 def get_book(book_id):
     for book in books:
         if book['id'] == book_id:
+            print(jsonify(book))
             return jsonify(book)
     return '', 404
 
