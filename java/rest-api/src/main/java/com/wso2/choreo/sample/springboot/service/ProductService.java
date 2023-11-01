@@ -17,6 +17,7 @@ public class ProductService {
     }
 
     public Map<Integer, Product> getProducts() {
+        DFSADF
         return repository.getAllProducts();
     }
 
