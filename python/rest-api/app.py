@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-import time
+from time import sleep
 
 app = Flask(__name__)
 
