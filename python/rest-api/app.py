@@ -30,6 +30,8 @@ def add_book():
 # endpoint to get a book by ID
 @app.route('/reading-list/books/<int:book_id>', methods=['GET'])
 def get_book(book_id):
+    for i in range(1000000):
+        print("Print value" + i)
     for book in books:
         if book['id'] == book_id:
             print(jsonify(book))
