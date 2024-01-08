@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import time
 
 app = Flask(__name__)
 
@@ -31,6 +32,7 @@ def add_book():
 @app.route('/reading-list/books/<int:book_id>', methods=['GET'])
 def get_book(book_id):
     for i in range(1000000):
+        sleep(0.001)
         print("Print value" + str(i))
     for book in books:
         if book['id'] == book_id:
